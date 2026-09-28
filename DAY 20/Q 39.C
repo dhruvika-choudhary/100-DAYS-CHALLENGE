@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, rem, product = 1, found = 0;
+
+    scanf("%d", &n);
+
+    while (n != 0)
+    {
+        rem = n % 10;
+
+        if (rem % 2 != 0)
+        {
+            product = product * rem;
+            found = 1;
+        }
+
+        n = n / 10;
+    }
+
+    if (found == 1)
+        printf("%d", product);
+    else
+        printf("0");
+
+    return 0;
+}
